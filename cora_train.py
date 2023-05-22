@@ -5,9 +5,11 @@ import torch
 from torch_geometric.loader import NeighborSampler
 import tqdm
 import torch_sparse
+import numpy as np
+
+
 
 import torch.nn.functional as F
-import numpy as np
 import random
 import copy
 import argparse
@@ -37,8 +39,8 @@ def feature_propagation(edge_index, X, feature_mask, num_iterations):
     propagation_model = FeaturePropagation(num_iterations=num_iterations)
     return propagation_model.propagate(x=X, edge_index=edge_index, mask=feature_mask)
 
-seed_everything(0)
 
+seed_everything(0)
 
 
 

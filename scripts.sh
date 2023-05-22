@@ -10,6 +10,9 @@ sh repeat_code_fognn.sh CiteSeer 0.5 0 100 512 1
 NF citeseer cutoff = 0.001 2 layer fognn
 FP citeseer cutoff = 0.01 ( 1 layer fognn)
 
+
+python cora_train.py --data=CiteSeer --missing_rate=0.99 --edge_value_thresh=0.01 --imputation='fp' --categorical=1 --result_file=tmp.txt --gpu=2 --verbose=1 --num_epochs=100 --num_layers=1 --bs_train_nbd=512 --bs_test_nbd=-1 --drop_rate=0.4
+
 Actor
 sh repeat_code_fognn.sh Actor 0 0 100 512 1
 sh repeat_code_fognn.sh Actor 0.5 1 100 512 1

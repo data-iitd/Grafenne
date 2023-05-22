@@ -21,8 +21,12 @@ To run on large scale graphs like Physics, following commands can be run on vari
 
 `
 python cora_train_scale.py --data="Physics" --missing_rate=0 --gpu=1 --verbose=1 --num_epochs=1000 --num_layers=1 --bs_train_nbd=1024 --bs_test_nbd=-1 --drop_rate=0.3 --categorical=True --otf_sample=1 --fto_sample=1 --num_obs_samples=15 --num_feat_samples=15 --sampling_in_loop=0
+`
 
+`
 python cora_train_scale.py --data="Physics" --missing_rate=0.5 --gpu=3 --verbose=1 --num_epochs=1000 --num_layers=1 --bs_train_nbd=2048 --bs_test_nbd=-1 --drop_rate=0.5 --categorical=True --otf_sample=1 --fto_sample=1 --num_obs_samples=30 --num_feat_samples=30 --sampling_in_loop=1
+`
 
+`
 python cora_train_scale.py --data="Physics" --missing_rate=0.99 --gpu=3 --verbose=1 --num_epochs=30 --num_layers=1 --bs_train_nbd=2048 --bs_test_nbd=-1 --drop_rate=0.2 --otf_sample=0 --fto_sample=0
 `

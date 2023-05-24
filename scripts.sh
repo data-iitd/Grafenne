@@ -1,3 +1,4 @@
+ This is giving 87.8 python cora_train.py --data=Cora --missing_rate=0 --categorical=1 --result_file=temp.txt --gpu=0 --verbose=1 --num_epochs=300 --num_layers=2 --bs_train_nbd=-1 --bs_test_nbd=-1
 python cora_train.py --data=$1 --missing_rate=0 --categorical=1 --result_file=$result_file --gpu=0 --verbose=1 --num_epochs=300 --num_layers=2 --bs_train_nbd=-1 --bs_test_nbd=-1
 python cora_train.py --data=$1 --missing_rate=0.5 --categorical=1 --result_file=$result_file --gpu=0 --verbose=1 --num_epochs=300 --num_layers=2 --bs_train_nbd=-1 --bs_test_nbd=-1
 python cora_train.py --data=$1 --missing_rate=0.9 --categorical=1 --result_file=$result_file --gpu=0 --verbose=1 --num_epochs=300 --num_layers=2 --bs_train_nbd=-1 --bs_test_nbd=-1
@@ -352,3 +353,6 @@ sh repeat_code_layer1_scale_fp.sh Computer 0.99999 3 100 1024 0 0.1
 
 BASELINE MODELS
 python baseline_models_link.py --data="Cora" --missing_rate=0 --gpu=2  --num_epochs=100 --model_name='gcnmf'
+
+This works
+python cora_link.py --data=Cora --categorical=True --imputation='zero' --result_file=temp.txt --missing_rate=0 --gpu=3  --num_epochs=1000 --num_layers=1 --bs_train_nbd=-1 --bs_test_nbd=-1 --drop_rate=0.2 --otf_sample=1 --fto_sample=1 --num_obs_samples=30 --verbose=0 --num_feat_samples=30 --sampling_in_loop=0

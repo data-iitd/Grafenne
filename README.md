@@ -16,7 +16,10 @@ python cora_train.py --data=CiteSeer --missing_rate=0.99 --result_file=tmp.txt -
 The above commands are CiteSeer, similar can be for other datasets such as Cora. The datasets used in paper are downloadable from pytorch geometric graph datasets.
 
 also for lower missing rates, use --categorical=1 flag
-
+`
+ python cora_train.py --data=Cora --missing_rate=0 --categorical=1 --result_file=temp.txt --gpu=0 --verbose=1 --num_epochs=300 --num_layers=2 --bs_train_nbd=-1 --bs_test_nbd=-1
+`
+or instead of whole graph as single batch, run in multi-batch by variyng bs_train_nbd
 `
 python cora_train.py --data=Cora --missing_rate=0 --result_file=tmp.txt --gpu=0 --verbose=1 --num_epochs=500 --num_layers=2 --bs_train_nbd=1024 --bs_test_nbd=-1 --categorical=True
 `

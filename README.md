@@ -77,14 +77,18 @@ python cora_train_scale.py --data="Physics" --missing_rate=0.99 --gpu=3 --verbos
 
 
 
-For link prediction tasks, 
+### For link prediction tasks
+
 `
 python cora_link.py --data=$1 --categorical=True --imputation='zero' --result_file=$result_file --missing_rate=$2 --gpu=3  --num_epochs=500 --num_layers=1 --bs_train_nbd=-1 --bs_test_nbd=-1 --drop_rate=0.4 --otf_sample=1 --fto_sample=1 --num_obs_samples=15 --verbose=1 --num_feat_samples=15 --sampling_in_loop=0
 `
 for missing rate 0 and 0.5
+`
 python cora_link.py --data=Cora --categorical=True --imputation='zero' --result_file='' --missing_rate=0 --gpu=3  --num_epochs=500 --num_layers=1 --bs_train_nbd=-1 --bs_test_nbd=-1 --drop_rate=0.4 --otf_sample=1 --fto_sample=1 --num_obs_samples=15 --verbose=1 --num_feat_samples=15 --sampling_in_loop=0
-
+`
 
 for missing rate 0.99
 
+`
 python cora_link.py --data=Cora --imputation='zero' --result_file='' --missing_rate=0.99 --gpu=3  --num_epochs=500 --num_layers=1 --bs_train_nbd=-1 --bs_test_nbd=-1 --drop_rate=0.3 --otf_sample=0 --fto_sample=0 --num_obs_samples=30 --verbose=1 --num_feat_samples=15 --sampling_in_loop=0
+`
